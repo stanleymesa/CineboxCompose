@@ -23,7 +23,6 @@ plugins {
     id("kotlin-parcelize")
     id("kotlin-kapt")
     kotlin("plugin.serialization")
-    id("com.google.gms.google-services")
     id("com.google.firebase.crashlytics")
 }
 
