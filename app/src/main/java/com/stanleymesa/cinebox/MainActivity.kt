@@ -4,19 +4,18 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import com.stanleymesa.cinebox.ui.theme.CineboxComposeTheme
+import com.stanleymesa.core.ui.theme.CineboxComposeTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +26,7 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = Color.Cyan
+                    color = MaterialTheme.colorScheme.background
                 ) {
                     Greeting()
                 }
@@ -39,15 +38,17 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting() {
     Scaffold(
-        modifier = Modifier.fillMaxSize().safeDrawingPadding(),
-        containerColor = Color.Red,
+        modifier = Modifier
+            .fillMaxSize()
+            .safeDrawingPadding(),
+        containerColor = MaterialTheme.colorScheme.background,
     ) {
         LazyColumn(
             modifier = Modifier.fillMaxWidth(),
             contentPadding = it,
         ) {
             items(count = 100) { index ->
-                Text("Android Dev to main ${index + 1}", color = Color.White)
+                Text("Android Dev to main ${index + 1}", color = MaterialTheme.colorScheme.primary)
             }
         }
     }

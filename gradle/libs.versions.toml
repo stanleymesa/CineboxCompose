@@ -46,7 +46,6 @@ google-service = "4.4.2"
 firebase-crashlytics = "3.0.2"
 firebase-bom = "33.2.0"
 play-service-location = "21.3.0"
-chucker = "4.0.0"
 lottie = "6.6.2"
 camerax = "1.4.1"
 
@@ -113,8 +112,6 @@ firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
 firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
 firebase-firestore = { module = "com.google.firebase:firebase-firestore" }
 lottie = { module = "com.airbnb.android:lottie-compose", version.ref = "lottie" }
-chucker-debug = { module = "com.github.chuckerteam.chucker:library", version.ref = "chucker" }
-chucker-release = { module = "com.github.chuckerteam.chucker:library-no-op", version.ref = "chucker" }
 
 androidx-camera-core = { module = "androidx.camera:camera-core", version.ref = "camerax" }
 androidx-camera-compose = { module = "androidx.camera:camera-compose", version.ref = "camerax" }

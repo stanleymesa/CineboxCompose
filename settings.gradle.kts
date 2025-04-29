@@ -18,3 +18,4 @@ rootProject.name = "Cinebox-Compose"
 
 // module
 include(":app")
+include(":core")
